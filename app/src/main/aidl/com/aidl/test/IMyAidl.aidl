@@ -1,7 +1,7 @@
 // IMyAidl.aidl
 package com.aidl.test;
 
-// Declare any non-default types here with import statements
+// 非基本类型数据，需要导入全路径
 import com.aidl.test.bean.Person;
 interface IMyAidl {
     /**

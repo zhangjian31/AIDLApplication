@@ -17,3 +17,5 @@
      创建ServiceConnection接口，拿到AIDLl类的引用；
      bindService()；
      调用AIDL中定义好的接口；
+4、main文件夹下aidl的包名和Java文件夹的包名要保持一致。
+5、除了进本类型外，aidl中其它的参数都要加上方向类型：in(输入)、out(输出)、inout(输入输出)
