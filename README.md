@@ -5,3 +5,15 @@
   List、Map（元素必须是AIDL支持的数据类型、Service端具体的类里必须是ArrayList或者HashMap）
   其它AIDL生成的接口
   实现Parcelable的实体
+3、步骤
+  1）创建AIDL文件
+     创建实体类，实现Parcelable接口，以便序列化和反序列化；
+     创建aidl文件件，创建实体类映射aidl文件，创建aidl接口文件；
+     编译工程，生成Binder的java文件；
+  2）创建服务端
+     创建Service，在其中创建上面的Binder对象实例，实现接口定义的方法；
+     在onBind中返回Binder对象；
+  3）创建客户端
+     创建ServiceConnection接口，拿到AIDLl类的引用；
+     bindService()；
+     调用AIDL中定义好的接口；
